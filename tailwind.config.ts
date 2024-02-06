@@ -1,12 +1,20 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: ["class"],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{ts,tsx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
       fontFamily: {
         iransans: "iransans",
@@ -93,8 +101,53 @@ const config: Config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      borderRadius: {
+        lg: "5px",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: 0 },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: 0 },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+    },
+    screens: {
+      xs: "420px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      xxl: "1536px",
     },
   },
-  plugins: [],
+  plugins: [require("daisyui"), require("tailwindcss-animate")],
+  daisyui: {
+    themes: [
+      {
+        lightTheme: {
+          primary: "#2079c5",
+          secondary: "#1ccaff",
+          accent: "#2a9d8f",
+          neutral: "#264653",
+          "base-100": "#ffffff",
+          info: "#778ad4",
+          success: "#23b893",
+          warning: "#f79926",
+          error: "#ea535a",
+          body: {
+          },
+        },
+      },
+    ],
+  },
 };
-export default config;

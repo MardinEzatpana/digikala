@@ -2,7 +2,7 @@ import "../style/globals.scss";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: { default: "ترانه", template: "%s - ترانه" },
+  title: { default: "دیجی کالا", template: "%s - دیجی کالا" },
   description: "Digikala clone | کلون فروشگاه اینترنتی دیجیکالا",
 };
 export default async function RootLayout({

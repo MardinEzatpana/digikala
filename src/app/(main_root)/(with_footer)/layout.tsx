@@ -8,7 +8,7 @@ export default function MainLayout({
 }) {
   return (
     <>
-      <Suspense fallback={<p>heather loading</p>}>
+      <Suspense fallback={<p>header loading</p>}>
         <Header />
       </Suspense>
       <section>{children}</section>
