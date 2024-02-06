@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+::-webkit-scrollbar-thumb {
+  background: #393812;
+  -webkit-border-radius: 1ex;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+  background: #ffffff;
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(fonts/iransans/ttf/IRANSansWeb.ttf);
+}
+@font-face {
+  font-family: iransansnum;
+  src: url(fonts/iransans/ttf-num/IRANSansWebFaNum.ttf);
+}
+@font-face {
+  font-family: iransansbold;
+  src: url(fonts/iransans/ttf/IRANSansWeb_Bold.ttf);
+}
+@font-face {
+  font-family: iranyekan;
+  src: url(fonts/iranyekan/IRANYekanWeb.ttf);
+}
+@font-face {
+  font-family: iranyekan_bold;
+  src: url(fonts/iranyekan/IRANYekanWeb-Bold.ttf);
+}
+@font-face {
+  font-family: yekan;
+  src: url(fonts/iranyekan/Yekan.ttf);
+}
+
+@function size($size) {
+  @return map-get($font-sizes, $size);
+}
+@mixin responsive($brekPoint) {
+  @if ($brekPoint==xl) {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if ($brekPoint==lg) {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+  @if ($brekPoint==md) {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  @if ($brekPoint==sm) {
+    @media (max-width: 450px) {
+      @content;
+    }
+  }
+  @if ($brekPoint==xs) {
+    @media (max-width: 400px) {
+      @content;
+    }
+  }
+}
+
+html {
+  font-size: 70.5%;
+  @include responsive(lg) {
+    font-size: 64%;
+  }
+  @include responsive(md) {
+    font-size: 60%;
+  }
+  @include responsive(sm) {
+    font-size: 58%;
+  }
+  @include responsive(xs) {
+    font-size: 58%;
+  }
+}
+
+.swiper-button-disabled {
+  opacity: 10% !important;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  transition: all 300ms ease-in-out !important;
+}
