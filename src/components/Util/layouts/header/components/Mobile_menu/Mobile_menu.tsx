@@ -56,14 +56,14 @@ const Mobile_menu = ({cats}:Props ) => {
   const [open, setOpen] = React.useState(false);
 
   const [selectedTab, setSelectedTab] = useState<SelectedTab>(
-    SelectedTab.Tools,
+    SelectedTab.Drinks,
   );
   return (
     <div className=" sm:hidden">
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger
           onClick={() => {
-            setSelectedTab(SelectedTab.Tools);
+            setSelectedTab(SelectedTab.Drinks);
           }}
           asChild
         >

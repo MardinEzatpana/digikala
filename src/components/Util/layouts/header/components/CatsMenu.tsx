@@ -68,7 +68,7 @@ export function CatsMenu({ mainCats }: Props) {
                   {cat.title}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className=" rounded-xl border-transparent">
-                  <ul className="grid gap-3 p-4 md:w-[260px] md:grid-cols-2 md:grid-rows-2 items-stretch">
+                  <ul className="grid gap-3 p-4 md:w-[700px] md:grid-cols-5 md:grid-rows-2 items-stretch">
                     <li className="row-span-2">
                       <NavigationMenuLink asChild>
                         <Link

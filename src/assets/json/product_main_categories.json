@@ -5,7 +5,7 @@
           },
           "title": "نوشیدنی ها",
           "image":"/image/categories/Main_cat/drinks_v2.png",
-          "label": "tools",
+          "label": "drinks",
           "specific_cat":[
             {
               "_id": {
@@ -96,6 +96,12 @@
               "label": "turkish-coffee",
               "products_id": [
                 {
+                  "$oid": "64c5c349cc0b7ede8fa2f29a"
+                },
+                {
+                  "$oid": "64c5c349cc0b7ede8fa2f29e"
+                },
+                {
                   "$oid": "64c5c349cc0b7ede8fa2f29f"
                 },
                 {
@@ -119,12 +125,6 @@
               "label": "coffee-capsule",
               "products_id": [
                 {
-                  "$oid": "64c5c349cc0b7ede8fa2f29a"
-                },
-                {
-                  "$oid": "64c5c349cc0b7ede8fa2f29e"
-                },
-                {
                   "$oid": "64c5c349cc0b7ede8fa2f2ab"
                 },
                 {
@@ -132,6 +132,57 @@
                 },
                 {
                   "$oid": "64c5c349cc0b7ede8fa2f2b8"
+                },
+                {
+                  "$oid": "64c5c349cc0b7ede8fa2f2cd"
+                },
+                {
+                  "$oid": "64c5c349cc0b7ede8fa2f2c9"
+                },
+                {
+                  "$oid": "64c5c349cc0b7ede8fa2f2c3"
+                },
+                {
+                  "$oid": "64c5c349cc0b7ede8fa2f2be"
+                },
+                {
+                  "$oid": "64c5c349cc0b7ede8fa2f2b9"
+                },
+                {
+                  "$oid": "64c5c349cc0b7ede8fa2f2b6"
+                },
+                {
+                  "$oid": "64c5c349cc0b7ede8fa2f2b3"
+                },
+                {
+                  "$oid": "64c5c349cc0b7ede8fa2f2b1"
+                },
+                {
+                  "$oid": "64c5c349cc0b7ede8fa2f2ae"
+                },
+                {
+                  "$oid": "64c5c349cc0b7ede8fa2f2ad"
+                },
+                {
+                  "$oid": "64c5c349cc0b7ede8fa2f2a9"
+                },
+                {
+                  "$oid": "64c5c349cc0b7ede8fa2f2a8"
+                },
+                {
+                  "$oid": "64c5c349cc0b7ede8fa2f2a7"
+                },
+                {
+                  "$oid": "64c5c349cc0b7ede8fa2f29b"
+                },
+                {
+                  "$oid": "64c5c349cc0b7ede8fa2f299"
+                },
+                {
+                  "$oid": "64c5c349cc0b7ede8fa2f297"
+                },
+                {
+                  "$oid": "64c5c349cc0b7ede8fa2f295"
                 }
               ]
             },
@@ -242,7 +293,7 @@
           },
           "title": "ابزار تهیه نوشیدنی",
           "image":"/image/categories/Main_cat/tools.png",
-          "label": "drinks",
+          "label": "tools",
           "specific_cat": [
             {
               "_id": {
