@@ -1,17 +1,15 @@
+/* eslint-disable @next/next/no-img-element */
 "use server";
 
 import React from "react";
 import Link from "next/link";
 import HelpIcon from "../../ui/icons/helpIcon";
 import CartIcon from "../../ui/icons/CartIcon"
-import NavTop from "@/assets/images/nav-top.webp"
-import LogoDG from "@/assets/images/logo.png"
 import Search from "./components/Search";
 import Log from "./components/Log";
 import NavbarLinks from "./components/NavbarLinks";
 import product_main_categories from "@/assets/json/product_main_categories.json"
 import Mobile_menu from "./components/Mobile_menu/Mobile_menu";
-import Image from "next/image";
 import { CatsMenu } from "./components/CatsMenu";
 
 
@@ -20,11 +18,9 @@ const Header = () => {
   return (
     <header>
       <Link href={"/"}>
-          <Image
-            src={NavTop}
-            height={96}
+          <img
+            src="/image/nav-top.webp"
             className="h-[6rem] w-full pb-4 object-cover"
-            priority
             alt=""
           />
         </Link>
@@ -33,12 +29,9 @@ const Header = () => {
           <div className="flex items-center justify-between">
           <Mobile_menu cats={product_main_categories}/>
           <Link href={"/"}>
-              <Image
-                src={LogoDG}
-                width={192}
-                height={46}
+              <img
+                src="/image/logo.png"
                 className="h-[3rem] w-[12rem] "
-                priority
                 alt=""
               />
             </Link>
