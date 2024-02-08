@@ -3,6 +3,7 @@ import SpecificCats from "@/components/Pages/Home_page/SpecificCats/SpecificCats
 import product_main_categories from "@/assets/json/product_main_categories.json"
 import AdSlider from "@/components/Util/components/ad_slider/AdSlider";
 import MainCatsBanner from "@/components/Pages/Home_page/MainCatsBanner/MainCatsBanner";
+import MainCatsSlider from "@/components/Pages/Home_page/MainCatsSlider/MainCatsSlider";
 
 export default function Home() {
 
@@ -12,6 +13,7 @@ export default function Home() {
       <SpecificCats cats={product_main_categories} />
       <AdSlider />
       <MainCatsBanner main_cats={product_main_categories} />
+      <MainCatsSlider />
     </div>
   );
 }

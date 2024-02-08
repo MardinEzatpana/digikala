@@ -5,37 +5,9 @@ import Link from "next/link";
 import Status from "./components/Status";
 import ImageComponent from "./components/ImageComponent";
 import Title from "./components/Title";
+import { Product } from "@prisma/client";
 
-type Product = {
-  _id: {
-    $oid: string
-  },
-  title: string,
-  brandFn: string,
-  brandEn: string,
-  main_cat_id: {
-    $oid: string
-  },
-  specific_cat_id: { $oid: string },
-  image_url:string ,
-  status: boolean,
-  selling_type: string,
-  price: number,
-  off_percent: number,
-  statistics: {
-    totalRate: number,
-    buyerRate: number,
-    totalLike: number,
-    soled: number,
-    views: number
-  },
-  createdAt: {
-    $date: string
-  },
-  updatedAt: {
-    $date: string
-  }
-}
+
 interface Props {
   product: Product;
   index: number;
@@ -46,7 +18,6 @@ const Product_slid_card = ({
     title,
     status,
     selling_type,
-    statistics,
     price,
     off_percent,
     image_url,

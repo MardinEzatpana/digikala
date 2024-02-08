@@ -37,6 +37,7 @@ const HeroSlide = ({
           src={image_url}
           height={100}
           width={100}
+          className=" rounded-3xl"
           alt={title || "پیشنهاد شگفت انگیز"}
         />
         <Link
