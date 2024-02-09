@@ -6,6 +6,7 @@ import Status from "./components/Status";
 import ImageComponent from "./components/ImageComponent";
 import Title from "./components/Title";
 import { Product } from "@prisma/client";
+import { urlMaker } from "@/util_functions/urlMaker";
 
 
 interface Props {
@@ -21,6 +22,7 @@ const Product_slid_card = ({
     price,
     off_percent,
     image_url,
+    id
   },
   index,
 }: Props) => {
@@ -31,7 +33,7 @@ const Product_slid_card = ({
       }`}
     >
       <Link
-        href="#"
+        href={`/product/${id}/${urlMaker(title)}`}
         className=" grid h-full grid-rows-3 p-3"
       >
         <ImageComponent image_url={image_url} title={title} />

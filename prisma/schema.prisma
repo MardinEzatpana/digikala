@@ -20,6 +20,7 @@ model Product {
   image_url           String
   title               String
   updatedAt           DateTime              @db.Date
+  Ad                  Ad[]
   off_percent         Int
   price               Int
   selling_type        String
@@ -51,4 +52,15 @@ model Specific_cat {
   Product      Product[]
 
   @@map("products_specific_categories")
+}
+
+model Ad {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  product    Product  @relation(fields: [product_id], references: [id], onDelete: Cascade)
+  product_id String   @db.ObjectId
+  status     Boolean
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @db.Date
+
+  @@map("product_ad")
 }
