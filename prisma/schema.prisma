@@ -16,6 +16,8 @@ model Product {
   main_cat_id         String                @db.ObjectId
   specific_cat        Specific_cat          @relation(fields: [specific_cat_id], references: [id])
   specific_cat_id     String                @db.ObjectId
+  brand_id            String                @db.ObjectId
+  brand               Brand                 @relation(fields: [brand_id], references: [id])
   createdAt           DateTime              @db.Date
   image_url           String
   title               String
@@ -25,6 +27,7 @@ model Product {
   price               Int
   selling_type        String
   status              Boolean
+  statistics          ProductsStatistics
 
   @@map("products")
 }
@@ -63,4 +66,22 @@ model Ad {
   updatedAt  DateTime @db.Date
 
   @@map("product_ad")
+}
+
+model Brand {
+  id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  title_fr String
+  title_en String
+  image    String
+  Product  Product[]
+
+  @@map("products_brands")
+}
+
+type ProductsStatistics {
+  buyerRate Int
+  soled     Int
+  totalLike Int
+  totalRate Int
+  views     Int
 }

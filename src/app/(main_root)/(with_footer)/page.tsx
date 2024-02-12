@@ -1,18 +1,22 @@
 import Hero from "@/components/Pages/Home_page/hero/Hero";
 import SpecificCats from "@/components/Pages/Home_page/SpecificCats/SpecificCats";
-import product_main_categories from "@/assets/json/product_main_categories.json"
 import AdSlider from "@/components/Util/components/ad_slider/AdSlider";
 import MainCatsBanner from "@/components/Pages/Home_page/MainCatsBanner/MainCatsBanner";
 import MainCatsSlider from "@/components/Pages/Home_page/MainCatsSlider/MainCatsSlider";
+import { MainCatsWithSpecificCats } from "@/types_validation/type";
+import { prisma } from "@/lib/db/prisma";
 
-export default function Home() {
+export default async function Home() {
+  const cats: MainCatsWithSpecificCats[] = await prisma.main_cat.findMany({
+    include: { Specific_cat: true },
+  });
 
   return (
     <div className="flex flex-col gap-3">
       <Hero />
-      <SpecificCats cats={product_main_categories} />
+      <SpecificCats cats={cats} />
       <AdSlider />
-      <MainCatsBanner main_cats={product_main_categories} />
+      <MainCatsBanner main_cats={cats} />
       <MainCatsSlider />
     </div>
   );

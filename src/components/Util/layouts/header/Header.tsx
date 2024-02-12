@@ -8,12 +8,16 @@ import CartIcon from "../../ui/icons/CartIcon"
 import Search from "./components/Search";
 import Log from "./components/Log";
 import NavbarLinks from "./components/NavbarLinks";
-import product_main_categories from "@/assets/json/product_main_categories.json"
 import Mobile_menu from "./components/Mobile_menu/Mobile_menu";
 import { CatsMenu } from "./components/CatsMenu";
+import { MainCatsWithSpecificCats } from "@/types_validation/type";
+import { prisma } from "@/lib/db/prisma";
 
 
-const Header = () => {
+const Header = async () => {
+  const cats: MainCatsWithSpecificCats[] = await prisma.main_cat.findMany({
+    include: { Specific_cat: true },
+  });
   
   return (
     <header>
@@ -27,7 +31,7 @@ const Header = () => {
       <div className="px-4 pb-4">
         <div className="mb-3 md:flex md:gap-6">
           <div className="flex items-center justify-between">
-          <Mobile_menu cats={product_main_categories}/>
+          <Mobile_menu cats={cats}/>
           <Link href={"/"}>
               <img
                 src="/image/logo.png"
@@ -47,7 +51,7 @@ const Header = () => {
           </div>
         </div>
         <div className="text-g1 hidden border-b-g1_7 md:flex md:gap-2">
-          <CatsMenu mainCats={product_main_categories} />
+          <CatsMenu mainCats={cats} />
           <NavbarLinks />
         </div>
       </div>

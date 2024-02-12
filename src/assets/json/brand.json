@@ -1,0 +1,266 @@
+[
+  {
+    "_id":{"$oid":"65c921dcc270ca86ef633a2d"},
+    "title_fr": "بن مانو",
+    "title_en": "bonmano",
+    "image": "/image/categories/Brands/Bonmano.png",
+    "products_id": [
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2c7"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2ca"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2cc"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2c4"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2c8"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2cb"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2c5"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2c6"
+      }
+    ]
+  },
+  {
+    "_id":{"$oid":"65c921dcc270ca86ef633a2e"},
+    "title_fr": "فرمند",
+    "title_en": "farmand",
+    "image": "/image/categories/Brands/Farmand.jpg",
+    "products_id": [
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f293"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f295"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f297"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f294"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f298"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f296"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f29a"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f292"
+      }
+    ]
+  },
+  {
+    "_id":{"$oid":"65c921dcc270ca86ef633a2f"},
+    "title_fr": "مولتی کافه",
+    "title_en": "MultiCafe",
+    "image": "/image/categories/Brands/MultiCafe.jpg",
+    "products_id": [
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f29c"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2a0"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2a4"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2a5"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2aa"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2ac"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f29e"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f29f"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2a1"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2a3"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2ab"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f29d"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2a2"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2a6"
+      }
+    ]
+  },
+  {
+    "_id":{"$oid":"65c9ba57c38888d7b72263c8"},
+    "title_fr": "دیسترو",
+    "title_en": "Diestro",
+    "image": "/image/categories/Brands/Diestro.jpg",
+    "products_id": [
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2b2"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2af"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2b0"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2b4"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2b5"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2b7"
+      }
+    ]
+  },
+  {
+    "_id":{"$oid":"65c9c494c38888d7b72263cd"},
+    "title_fr": "دونیسی",
+    "title_en": "Donissi",
+    "image": "/image/categories/Brands/Donissi.jpg",
+    "products_id": [
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2bd"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2b8"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2ba"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2bb"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2bc"
+      }
+    ]
+  },
+  {
+    "_id":{"$oid":"65c9c56ec38888d7b72263d0"},
+    "title_fr": "تلنت",
+    "title_en": "talent",
+    "image": "/image/categories/Brands/Talent.png",
+    "products_id": [
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2c0"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2bf"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2c1"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2c2"
+      }
+    ]
+  },
+  {
+    "_id":{"$oid":"65c9c5fcc38888d7b72263d2"},
+    "title_fr": "فیلیپس",
+    "title_en": "philips",
+    "image": "/image/categories/Brands/Philips.png",
+    "products_id": [
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f299"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2ad"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2b6"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2a8"
+      }
+      
+    ]
+  },
+  {
+    "_id":{"$oid":"65c9c69dc38888d7b72263d3"},
+    "title_fr": "مباشی",
+    "title_en": "mebashi",
+    "image": "/image/categories/Brands/Mebashi.jpg",
+    "products_id": [
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f29b"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2b1"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2c3"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2cd"
+      }
+      
+    ]
+  },
+  {
+    "_id":{"$oid":"65c9c6f0c38888d7b72263d4"},
+    "title_fr": "نمسیو",
+    "title_en": "nemesio",
+    "image": "/image/categories/Brands/Nemesio.jpg",
+    "products_id": [
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2a7"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2b9"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2be"
+      }
+      
+    ]
+  },
+  {
+    "_id":{"$oid":"65c9c75ac38888d7b72263d5"},
+    "title_fr": "بوش",
+    "title_en": "bosch",
+    "image": "/image/categories/Brands/Bosch.png",
+    "products_id": [
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2a9"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2ae"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2b3"
+      },
+      {
+        "$oid": "64c5c349cc0b7ede8fa2f2c9"
+      }
+      
+    ]
+  }
+]

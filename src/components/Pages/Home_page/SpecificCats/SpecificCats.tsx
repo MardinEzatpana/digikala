@@ -1,33 +1,10 @@
+import { MainCatsWithSpecificCats } from "@/types_validation/type";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 interface Props {
-  cats:{
-    _id: {
-      $oid:string
-    }
-    title:string
-    image:string
-    label:string
-    specific_cat:{
-      _id: {
-        $oid:string
-      }
-      main_cat_id: {
-        $oid:string
-      }
-      title:string
-      single_image:string
-      hero_image:string
-      label:string
-      products_id:
-        {
-          $oid:string
-        }[]
-    }[]
-  }[],
-  
+  cats: MainCatsWithSpecificCats[];
 }
 
 const SpecificCats = async ({ cats }: Props) => {
@@ -42,13 +19,13 @@ const SpecificCats = async ({ cats }: Props) => {
             return (
               <div
                 className="flex flex-wrap items-stretch justify-center gap-4 "
-                key={mainCat._id.$oid}
+                key={mainCat.id}
               >
-                {mainCat.specific_cat.map((specific) => {
+                {mainCat.Specific_cat.map((specific) => {
                   return (
                     <div
                       className="flex grow flex-col items-center justify-between gap-4 rounded-lg border-dark_6 border-opacity-10 bg-white bg-opacity-70 px-4 py-2 backdrop-blur-sm transition-all duration-150 hover:scale-[1.015] hover:border-transparent hover:shadow-lg"
-                      key={specific._id.$oid}
+                      key={specific.id}
                     >
                       <Link
                         className="flex h-full flex-col items-center justify-between gap-2"

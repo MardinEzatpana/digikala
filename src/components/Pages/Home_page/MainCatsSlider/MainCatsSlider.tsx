@@ -11,7 +11,7 @@ const MainCatsSlider = async () => {
   const topSellToolsProducts: Promise<AllCatsTopsViewProducts>[] = mainCats.map(
     async (mainCatItem: Main_cat): Promise<AllCatsTopsViewProducts> => {
       return await prisma.product.findMany({
-        take: 10,
+        take: 14,
         where: { main_cat_id: mainCatItem.id, status: true },
         include: { main_cat: true },
       });

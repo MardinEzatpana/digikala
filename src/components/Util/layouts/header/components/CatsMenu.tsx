@@ -15,33 +15,10 @@ import Link from "next/link";
 
 import ToolsIcon from "@/components/Util/ui/icons/ToolsIcon";
 import DrinksIcon from "@/components/Util/ui/icons/DrinksIcon";
+import { MainCatsWithSpecificCats } from "@/types_validation/type";
 
 interface Props {
-  mainCats:{
-    _id: {
-      $oid:string
-    }
-    title:string
-    image:string
-    label:string
-    specific_cat:{
-      _id: {
-        $oid:string
-      }
-      main_cat_id: {
-        $oid:string
-      }
-      title:string
-      single_image:string
-      hero_image:string
-      label:string
-      products_id:
-        {
-          $oid:string
-        }[]
-    }[]
-  }[],
-  
+  mainCats: MainCatsWithSpecificCats[];
 }
 
 export function CatsMenu({ mainCats }: Props) {
@@ -57,7 +34,7 @@ export function CatsMenu({ mainCats }: Props) {
         <NavigationMenuList>
           {mainCats.map((cat) => {
             return (
-              <NavigationMenuItem  key={cat._id.$oid}>
+              <NavigationMenuItem  key={cat.id}>
                 <NavigationMenuTrigger className="text-xl flex items-center gap-1">
                   {cat.title === "نوشیدنی ها" && (
                     <DrinksIcon classes="h-8 w-8 fill-dark_4" />
@@ -87,12 +64,12 @@ export function CatsMenu({ mainCats }: Props) {
                         </Link>
                       </NavigationMenuLink>
                     </li>
-                    {cat.specific_cat.map((specific) => {
+                    {cat.Specific_cat.map((specific) => {
                       return (
                         <ListItem
                           className="flex flex-col h-full justify-between border rounded-xl border-opacity-20 border-g1_7 items-stretch font-iransansbol hover:border-opacity-80"
-                          key={specific._id.$oid}
-                          href="#"
+                          key={specific.id}
+                          href={`/search/${specific.label}`}
                           title={specific.title}
                         >
                           <Image

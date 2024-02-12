@@ -1,32 +1,10 @@
+import { Main_cat } from "@prisma/client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 interface Props {
-  cat:{
-    _id: {
-      $oid:string
-    }
-    title:string
-    image:string
-    label:string
-    specific_cat:{
-      _id: {
-        $oid:string
-      }
-      main_cat_id: {
-        $oid:string
-      }
-      title:string
-      single_image:string
-      hero_image:string
-      label:string
-      products_id:
-        {
-          $oid:string
-        }[]
-    }[]
-  }
+  cat: Main_cat;
 }
 
 const Item = ({ cat }: Props) => {

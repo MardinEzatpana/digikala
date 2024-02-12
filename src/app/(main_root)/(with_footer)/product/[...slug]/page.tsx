@@ -26,7 +26,7 @@ const getProduct = cache(async (id: string) => {
   try {
     const product = await prisma.product.findUnique({
       where: { id: id },
-      include: { main_cat: true, specific_cat: true},
+      include: { main_cat: true, specific_cat: true, brand: true},
     });
     if (!product) {
       return notFound();

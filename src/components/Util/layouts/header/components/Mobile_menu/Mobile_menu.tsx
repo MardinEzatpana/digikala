@@ -15,37 +15,14 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/shadcn/ui/tabs";
+import { MainCatsWithSpecificCats } from "@/types_validation/type";
 
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
 interface Props {
-  cats:{
-    _id: {
-      $oid:string
-    }
-    title:string
-    image:string
-    label:string
-    specific_cat:{
-      _id: {
-        $oid:string
-      }
-      main_cat_id: {
-        $oid:string
-      }
-      title:string
-      single_image:string
-      hero_image:string
-      label:string
-      products_id:
-        {
-          $oid:string
-        }[]
-    }[]
-  }[],
-  
+  cats: MainCatsWithSpecificCats[];
 }
 
 enum SelectedTab {
@@ -72,7 +49,7 @@ const Mobile_menu = ({cats}:Props ) => {
           </div>
         </SheetTrigger>
         <SheetContent
-          className="flex w-full  max-w-xl flex-col gap-6 rounded-lg pt-[5rem] shadow-lg sm:hidden"
+          className="flex w-full  max-w-xl flex-col gap-6 rounded-lg pt-[5rem] shadow-lg md:hidden"
           side={"right"}
         >
           <Tabs
@@ -83,10 +60,10 @@ const Mobile_menu = ({cats}:Props ) => {
               {cats.map((mainCat) => {
                 return (
                   <TabsTrigger
-                    key={mainCat._id.$oid}
-                    value={mainCat._id.$oid}
-                    className={`w-full border-b-[3px] !bg-transparent pt-6 duration-0 ${
-                      selectedTab === mainCat.label ? "!bg-white !text-blue-500" : ""
+                    key={mainCat.id}
+                    value={mainCat.id}
+                    className={`w-full border-b-[3px] border-transparent !bg-transparent pt-6 duration-0 ${
+                      selectedTab === mainCat.label ? "!bg-white" : ""
                     }`}
                     onClick={() => {
                       if (mainCat.label === "tools") {
@@ -115,7 +92,7 @@ const Mobile_menu = ({cats}:Props ) => {
                 value={"show all"}
                 className={`w-full border-b-[3px] border-transparent !bg-transparent pt-6 duration-0`}
               >
-                <Link href="#" onClick={() => setOpen(false)}>
+                <Link href={"/search"} onClick={() => setOpen(false)}>
                   <div className="flex flex-col items-center gap-3">
                     <AllIcon classes="h-8 w-8 fill-dark_4" />
                     <span className=" font-iranyekan_bold text-xl">
@@ -129,14 +106,14 @@ const Mobile_menu = ({cats}:Props ) => {
               return (
                 <TabsContent
                   className="w-full"
-                  key={mainCat._id.$oid}
-                  value={mainCat._id.$oid}
+                  key={mainCat.id}
+                  value={mainCat.id}
                 >
                   <div dir="rtl" className="grid grid-cols-3 gap-6">
-                    {mainCat.specific_cat.map((specific) => {
+                    {mainCat.Specific_cat.map((specific) => {
                       return (
-                        <SheetClose key={specific._id.$oid} asChild>
-                          <Link href="#">
+                        <SheetClose key={specific.id} asChild>
+                          <Link href={`/search/${specific.label}`}>
                             <div className="flex flex-col items-center justify-center gap-2">
                               <div className="md:w28 flex h-24 w-24 items-center justify-center rounded-full bg-slate-200 md:h-28">
                                 <Image
@@ -157,7 +134,7 @@ const Mobile_menu = ({cats}:Props ) => {
                       );
                     })}
                     <SheetClose asChild>
-                      <Link href="#">
+                      <Link href={`/search/${mainCat.label}`}>
                         <div className="flex flex-col items-center justify-center gap-2">
                           <div className="md:w28 flex h-24 w-24 items-center justify-center rounded-full bg-slate-200 md:h-28">
                             <AllIcon classes="h-10 w-10 fill-dark_4" />

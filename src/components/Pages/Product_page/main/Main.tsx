@@ -18,6 +18,7 @@ const Main = ({ product }: Props) => {
       />
       <div className="col-span-2">
         <Header
+          product_brand={product.brand}
           product_title={product.title}
           product_cat={product.specific_cat.title}
         />
