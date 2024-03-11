@@ -29,7 +29,7 @@ const MainCatsSlider = async () => {
             <Slider
               heroSlide={{
                 image_url: catProducts[0].main_cat.image,
-                link_url: "#",
+                link_url: `/${catProducts[0].main_cat.label}`,
                 title: `پرفروش ترین ${catProducts[0].main_cat.title}`,
               }}
               bg_color={`bg-g1_7`}

@@ -38,3 +38,13 @@ export interface SortItem {
 }
 
 export type SortItems = SortItem[];
+
+export type MainCat_with_Specific_cats = Prisma.Main_catGetPayload<{
+  include: { Specific_cat: true };
+}>;
+
+export type DrinksBrands = Prisma.ProductGetPayload<{
+  select: {
+    brand: true;
+  };
+}>;
